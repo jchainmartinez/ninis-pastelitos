@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --rosa: #E8437A;
+  --rosa-claro: #FAE0EA;
+  --rosa-oscuro: #C4205C;
+  --turquesa: #5BBFB5;
+  --crema: #FDF4F7;
+  --texto: #2D2D2D;
+  --texto-claro: #8a5a6a;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--crema);
+  color: var(--texto);
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
