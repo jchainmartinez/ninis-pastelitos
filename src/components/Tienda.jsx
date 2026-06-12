@@ -33,7 +33,7 @@ const categorias = [
     desc: 'Sabores unicos con ingredientes seleccionados',
     productos: [
       {
-        id: 3, emoji: '🎂', nombre: 'Pastel de Pinon',
+        id: 3, emoji: '🎂', nombre: 'Pastel de Piñon',
         descripcion: 'Pastel artesanal elaborado con pinon de la region, de sabor unico e irresistible.',
         tamanos: [
           { label: 'Chico', personas: '8 personas', precio: 220 },
@@ -52,12 +52,7 @@ const categorias = [
       },
     ]
   },
-  {
-    id: 'temporada',
-    nombre: 'Los de Temporada',
-    desc: 'Proximamente algo especial',
-    productos: []
-  },
+  {id: 'temporada', nombre: 'Los de Temporada', desc: 'Proximamente algo especial', productos: []},
   { id: 'galletas', nombre: 'Galletas', desc: 'Proximamente', productos: [] },
   { id: 'panques', nombre: 'Panques', desc: 'Proximamente', productos: [] },
   { id: 'pays', nombre: 'Pays', desc: 'Proximamente', productos: [] },

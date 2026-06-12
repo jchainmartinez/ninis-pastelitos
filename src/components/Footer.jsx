@@ -12,7 +12,7 @@ function Footer() {
         color: 'white',
         marginBottom: '0.5rem'
       }}>
-        Ninis Pastelitos
+        <img src="/images/LogoNinis1.png" alt="Ninis Pastelitos" style={{ height: '60px', objectFit: 'contain', marginBottom: '0.5rem' }} />
       </div>
       <p style={{ fontSize: '0.85rem', opacity: 0.6, fontWeight: 300 }}>
         Hecho con amor · Tlaxcala, Mexico · ninispastelitos@gmail.com

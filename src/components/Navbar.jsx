@@ -11,8 +11,8 @@ function Navbar() {
     <>
       <nav style={{ position: 'fixed', top: 0, width: '100%', background: 'rgba(255,248,240,0.95)', backdropFilter: 'blur(8px)', zIndex: 100, padding: '0 2rem', borderBottom: '1px solid #f0d0d8' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '64px' }}>
-          <Link to="/" style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.4rem', color: 'var(--rosa-oscuro)', textDecoration: 'none' }}>
-            Ninis Pastelitos
+          <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+            <img src="/images/LogoNinis1.png" alt="Ninis Pastelitos" style={{ height: '50px', objectFit: 'contain' }} />
           </Link>
           <ul style={{ display: 'flex', gap: '2rem', listStyle: 'none' }}>
             {[

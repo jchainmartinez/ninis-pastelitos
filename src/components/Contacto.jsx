@@ -48,7 +48,7 @@ function Contacto() {
               </a>
             </div>
 
-            <a href="https://wa.me/521XXXXXXXXXX" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', background: '#25D366', color: 'white', padding: '14px 28px', borderRadius: '30px', textDecoration: 'none', fontWeight: 700, fontSize: '0.95rem', width: 'fit-content' }}>
+            <a href="https://wa.me/522761071624" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', background: '#25D366', color: 'white', padding: '14px 28px', borderRadius: '30px', textDecoration: 'none', fontWeight: 700, fontSize: '0.95rem', width: 'fit-content' }}>
               Pedir por WhatsApp
             </a>
 
@@ -58,7 +58,7 @@ function Contacto() {
 
             <div style={{ marginBottom: '1.2rem' }}>
               <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: 'var(--texto-claro)', textTransform: 'uppercase', marginBottom: '6px' }}>Nombre</label>
-              <input type="text" placeholder="Tu nombre completo" style={{ width: '100%', padding: '10px 14px', border: '1.5px solid #f0d0d8', borderRadius: '10px', fontFamily: 'Nunito, sans-serif', fontSize: '0.9rem', outline: 'none' }} />
+              <input type="text" placeholder="Nombre completo" style={{ width: '100%', padding: '10px 14px', border: '1.5px solid #f0d0d8', borderRadius: '10px', fontFamily: 'Nunito, sans-serif', fontSize: '0.9rem', outline: 'none' }} />
             </div>
 
             <div style={{ marginBottom: '1.2rem' }}>
@@ -68,13 +68,15 @@ function Contacto() {
 
             <div style={{ marginBottom: '1.2rem' }}>
               <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: 'var(--texto-claro)', textTransform: 'uppercase', marginBottom: '6px' }}>Telefono</label>
-              <input type="tel" placeholder="Tu numero de WhatsApp" style={{ width: '100%', padding: '10px 14px', border: '1.5px solid #f0d0d8', borderRadius: '10px', fontFamily: 'Nunito, sans-serif', fontSize: '0.9rem', outline: 'none' }} />
+              <input type="tel" placeholder="Tu numero telefonico" style={{ width: '100%', padding: '10px 14px', border: '1.5px solid #f0d0d8', borderRadius: '10px', fontFamily: 'Nunito, sans-serif', fontSize: '0.9rem', outline: 'none' }} />
             </div>
+
+            
 
             <div style={{ marginBottom: '1.2rem' }}>
               <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, color: 'var(--texto-claro)', textTransform: 'uppercase', marginBottom: '6px' }}>Tipo de pedido</label>
               <select style={{ width: '100%', padding: '10px 14px', border: '1.5px solid #f0d0d8', borderRadius: '10px', fontFamily: 'Nunito, sans-serif', fontSize: '0.9rem', outline: 'none', background: 'white' }}>
-                <option>Pastel de cumpleanos</option>
+                <option>Pastel de cumpleaños</option>
                 <option>Cupcakes</option>
                 <option>Pay</option>
                 <option>Galletas</option>

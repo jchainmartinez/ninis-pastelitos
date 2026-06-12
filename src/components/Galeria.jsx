@@ -1,7 +1,33 @@
 import { useState, useRef, useEffect } from 'react'
 
 const fotos = [
-  { id: 1, src: '/images/valores.png', alt: 'Pastel 1' },
+  { id: 1, src: '/images/img01.jpg', alt: 'Pastel 1' },
+  { id: 2, src: '/images/img02.jpg', alt: 'Pastel 2' },
+  { id: 3, src: '/images/img03.jpg', alt: 'Pastel 3' },
+  { id: 4, src: '/images/img04.jpg', alt: 'Pastel 4' },
+  { id: 5, src: '/images/img05.jpg', alt: 'Pastel 5' },
+  { id: 6, src: '/images/img06.jpg', alt: 'Pastel 6' },
+  { id: 7, src: '/images/img07.jpg', alt: 'Pastel 7' },
+  { id: 8, src: '/images/img08.jpg', alt: 'Pastel 8' },
+  { id: 9, src: '/images/img09.jpg', alt: 'Pastel 9' },
+  { id: 10, src: '/images/img10.jpg', alt: 'Pastel 10' },
+  { id: 11, src: '/images/img11.jpg', alt: 'Pastel 11' },
+  { id: 12, src: '/images/img12.jpg', alt: 'Pastel 12' },
+  { id: 13, src: '/images/img13.jpg', alt: 'Pastel 13' },
+  { id: 14, src: '/images/img14.jpg', alt: 'Pastel 14' },
+  { id: 15, src: '/images/img15.jpg', alt: 'Pastel 15' },
+  { id: 16, src: '/images/img16.jpg', alt: 'Pastel 16' },
+  { id: 17, src: '/images/img17.jpg', alt: 'Pastel 17' },
+  { id: 18, src: '/images/img18.jpg', alt: 'Pastel 18' },
+  { id: 19, src: '/images/img19.jpg', alt: 'Pastel 19' },
+  { id: 20, src: '/images/img20.jpg', alt: 'Pastel 20' },
+  { id: 21, src: '/images/img21.jpg', alt: 'Pastel 21' },
+  { id: 22, src: '/images/img22.jpg', alt: 'Pastel 22' },
+  { id: 23, src: '/images/img23.jpg', alt: 'Pastel 23' },
+  { id: 24, src: '/images/img24.jpg', alt: 'Pastel 24' },
+  { id: 25, src: '/images/img25.jpg', alt: 'Pastel 25' },
+  { id: 26, src: '/images/img26.jpg', alt: 'Pastel 26' },
+
 ]
 
 function LightBox({ foto, onCerrar }) {
