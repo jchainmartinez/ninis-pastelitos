@@ -9,6 +9,7 @@ const categorias = [
     productos: [
       {
         id: 1, emoji: '🎂', nombre: 'Pastel Oreo',
+        imagen: null,
         descripcion: 'Delicioso pastel con galletas Oreo, relleno de crema y decorado con trozos de galleta.',
         tamanos: [
           { label: 'Chico', personas: '10 personas', precio: 180 },
@@ -18,12 +19,24 @@ const categorias = [
       },
       {
         id: 2, emoji: '🎂', nombre: 'Pastel Crunck',
+        imagen: null,
         descripcion: 'Pastel esponjoso con chocolate crujiente y betun de vainilla.',
         tamanos: [
           { label: 'Chico', personas: '10 personas', precio: 180 },
           { label: 'Mediano', personas: '20 personas', precio: 250 },
           { label: 'Grande', personas: '30 personas', precio: 350 },
         ]
+      },
+      {
+        id: 5, emoji: '🎂', nombre: 'Pastel de Queso con Zarzamora',
+        imagen: '/images/img10.jpg',
+        descripcion: 'Suave pastel de queso con cobertura de zarzamora fresca.',
+        tamanos: [
+          { label: 'Chico', personas: '10 personas', precio: 180 },
+          { label: 'Mediano', personas: '20 personas', precio: 250 },
+          { label: 'Grande', personas: '30 personas', precio: 350 },
+        ]
+
       },
     ]
   },
@@ -34,7 +47,8 @@ const categorias = [
     productos: [
       {
         id: 3, emoji: '🎂', nombre: 'Pastel de Piñon',
-        descripcion: 'Pastel artesanal elaborado con pinon de la region, de sabor unico e irresistible.',
+        imagen: '/images/img11.jpg',
+        descripcion: 'Pastel artesanal elaborado con piñon de la region, de sabor unico e irresistible.',
         tamanos: [
           { label: 'Chico', personas: '8 personas', precio: 220 },
           { label: 'Mediano', personas: '15 personas', precio: 300 },
@@ -42,7 +56,8 @@ const categorias = [
         ]
       },
       {
-        id: 4, emoji: '🎂', nombre: 'Pastel de Mango',
+        id: 4, emoji: '🎂', nombre: 'Pastel de Mango con Queso',
+        imagen: '/images/img16.jpg',
         descripcion: 'Fresco y tropical, con capas de mousse de mango y decoracion de fruta natural.',
         tamanos: [
           { label: 'Chico', personas: '8 personas', precio: 220 },
@@ -52,8 +67,27 @@ const categorias = [
       },
     ]
   },
-  {id: 'temporada', nombre: 'Los de Temporada', desc: 'Proximamente algo especial', productos: []},
-  { id: 'galletas', nombre: 'Galletas', desc: 'Proximamente', productos: [] },
+  { id: 'temporada', 
+    nombre: 'Los de Temporada', 
+    desc: 'Proximamente algo especial', 
+    productos: [] },
+  {
+    id: 'galletas',
+    nombre: 'Galletas',
+    desc: 'Para cualquier tipo de ocasión',
+    productos: [
+      {
+        id: 6, emoji: '🍪', nombre: 'Galletas',
+        imagen: '/images/img27.jpg',
+        descripcion: 'Galletas artesanales decoradas para cualquier ocasion.',
+        tamanos: [
+          { label: '6 piezas', personas: '', precio: 120 },
+          { label: '12 piezas', personas: '', precio: 220 },
+          { label: '24 piezas', personas: '', precio: 400 },
+        ]
+      }
+    ]
+  },
   { id: 'panques', nombre: 'Panques', desc: 'Proximamente', productos: [] },
   { id: 'pays', nombre: 'Pays', desc: 'Proximamente', productos: [] },
   { id: 'gelatinas', nombre: 'Gelatinas', desc: 'Proximamente', productos: [] },
@@ -90,7 +124,15 @@ function ModalProducto({ producto, onCerrar }) {
       >
         <button onClick={onCerrar} style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'var(--rosa-claro)', border: 'none', width: '32px', height: '32px', borderRadius: '50%', cursor: 'pointer', fontSize: '1rem', color: 'var(--rosa-oscuro)' }}>x</button>
 
-        <div style={{ textAlign: 'center', fontSize: '5rem', marginBottom: '1rem' }}>{producto.emoji}</div>
+        <div style={{ height: '200px', overflow: 'hidden', borderRadius: '16px', background: 'var(--rosa-claro)', marginBottom: '1rem' }}>
+          {producto.imagen ? (
+            <img src={producto.imagen} alt={producto.nombre} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+          ) : (
+            <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '5rem' }}>
+              {producto.emoji}
+            </div>
+          )}
+        </div>
         <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.5rem', color: 'var(--texto)', marginBottom: '0.5rem' }}>{producto.nombre}</h3>
         <p style={{ color: 'var(--texto-claro)', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '1.5rem', fontWeight: 300 }}>{producto.descripcion}</p>
 
@@ -140,8 +182,14 @@ function TarjetaProducto({ producto }) {
         onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-6px)'}
         onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
       >
-        <div style={{ height: '160px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '4rem', background: 'var(--rosa-claro)' }}>
-          {producto.emoji}
+        <div style={{ height: '160px', overflow: 'hidden', background: 'var(--rosa-claro)' }}>
+          {producto.imagen ? (
+            <img src={producto.imagen} alt={producto.nombre} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+          ) : (
+            <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '4rem' }}>
+              {producto.emoji}
+            </div>
+          )}
         </div>
         <div style={{ padding: '1.25rem' }}>
           <div style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', color: 'var(--texto)', marginBottom: '0.3rem' }}>{producto.nombre}</div>

@@ -6,7 +6,7 @@ function Hero() {
       minHeight: '100vh', display: 'flex', alignItems: 'center',
       justifyContent: 'center', position: 'relative',
       overflow: 'hidden', padding: '80px 2rem 2rem',
-      background: 'radial-gradient(ellipse at 80% 50%, #fde8ed 0%, #fff8f0 60%)'
+      background: 'linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url(/images/fondo01.png) center/cover no-repeat'
     }}>
       <div style={{ textAlign: 'center', maxWidth: '700px', position: 'relative', zIndex: 1 }}>
 
@@ -16,13 +16,13 @@ function Hero() {
           letterSpacing: '1px', padding: '6px 16px', borderRadius: '20px',
           marginBottom: '1.5rem', textTransform: 'uppercase'
         }}>
-          ✨ Hecho con amor artesanal
+          ✨ ¡Déjanos endulzar tus mejores momentos!
         </div>
 
         <h1 style={{
           fontFamily: "'Playfair Display', serif",
           fontSize: 'clamp(2.8rem, 6vw, 5rem)',
-          lineHeight: 1.1, color: 'var(--texto)', marginBottom: '1.2rem'
+          lineHeight: 1.1, color: 'white', marginBottom: '1.2rem'
         }}>
           Pasteles que{' '}
           <em style={{ color: 'var(--rosa)' }}>enamoran</em>
@@ -30,11 +30,11 @@ function Hero() {
         </h1>
 
         <p style={{
-          fontSize: '1.1rem', color: 'var(--texto-claro)',
+          fontSize: '1.1rem', color: 'rgba(255,255,255,0.9)',
           lineHeight: 1.8, marginBottom: '2.5rem', fontWeight: 300
         }}>
-          Nos especializamos en la elaboración de pasteles únicos y personalizados 
-          que harán de tus celebraciones momentos inolvidables. 🎂✨ ¡Déjanos endulzar tus mejores momentos!
+          Nos especializamos en la elaboración de pasteles únicos y personalizados
+          que harán de tus celebraciones momentos inolvidables. 🎂✨ 
         </p>
 
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -46,10 +46,10 @@ function Hero() {
             Ver catálogo
           </Link>
           <Link to="/contacto" style={{
-            background: 'transparent', color: 'var(--rosa-oscuro)',
+            background: 'transparent', color: 'white',
             padding: '14px 32px', borderRadius: '30px',
             textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem',
-            border: '2px solid var(--rosa)'
+            border: '2px solid white'
           }}>
             Hacer un pedido
           </Link>
