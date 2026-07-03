@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 const banners = [
-  { id: 1, src: '/images/img32.jpg', alt: 'Dia del Padre' },
+  { id: 1, src: '/images/temgradua.png', alt: 'Dia del Padre' },
 ]
 
 function Hero() {
@@ -68,7 +68,7 @@ function Hero() {
         <img
           src={banners[0].src}
           alt={banners[0].alt}
-          style={{ width: '100%', maxHeight: '500px', objectFit: 'cover', display: 'block' }}
+          style={{ width: '100%', maxHeight: '700px', objectFit: 'cover', display: 'block' }}
         />
         <div style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'rgba(232,67,122,0.85)', color: 'white', padding: '6px 16px', borderRadius: '20px', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '1px' }}>
           TEMPORADA
