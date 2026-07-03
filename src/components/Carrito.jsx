@@ -1,13 +1,22 @@
 import { useCart } from '../context/CartContext'
-import { useNavigate } from 'react-router-dom'
 
 function Carrito({ onCerrar }) {
   const { carrito, eliminarDelCarrito, actualizarCantidad, vaciarCarrito, total } = useCart()
-  const navigate = useNavigate()
+
+  function generarMensajeWhatsApp() {
+    let mensaje = "Hola! Quisiera hacer el siguiente pedido:\n\n"
+    carrito.forEach(item => {
+      mensaje += `• ${item.nombre} (${item.tamano}${item.personas ? ' - ' + item.personas : ''}) x${item.cantidad} - $${(item.precio * item.cantidad).toLocaleString()}\n`
+    })
+    mensaje += `\nTotal: $${total.toLocaleString()}\n\nQuedo en espera de confirmacion. Gracias!`
+    return encodeURIComponent(mensaje)
+  }
 
   function handleCheckout() {
-    onCerrar()
-    navigate('/checkout')
+    if (carrito.length === 0) return
+    const mensaje = generarMensajeWhatsApp()
+    const numeroWhatsApp = "522761071624"
+    window.open(`https://wa.me/${numeroWhatsApp}?text=${mensaje}`, '_blank')
   }
 
   return (
@@ -35,7 +44,7 @@ function Carrito({ onCerrar }) {
                   <div style={{ fontSize: '2.5rem' }}>{item.emoji}</div>
                   <div style={{ flex: 1 }}>
                     <div style={{ fontWeight: 600, color: 'var(--texto)', marginBottom: '2px' }}>{item.nombre}</div>
-                    <div style={{ fontSize: '0.8rem', color: 'var(--texto-claro)', marginBottom: '0.5rem' }}>{item.tamano} - {item.personas}</div>
+                    <div style={{ fontSize: '0.8rem', color: 'var(--texto-claro)', marginBottom: '0.5rem' }}>{item.tamano}{item.personas ? ' - ' + item.personas : ''}</div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                       <button onClick={() => actualizarCantidad(item.id, item.tamano, item.cantidad - 1)} style={{ width: '28px', height: '28px', borderRadius: '50%', border: '1px solid #f0d0d8', background: 'white', cursor: 'pointer', color: 'var(--rosa-oscuro)', fontSize: '1rem' }}>-</button>
                       <span style={{ fontWeight: 600, color: 'var(--texto)' }}>{item.cantidad}</span>
@@ -55,8 +64,8 @@ function Carrito({ onCerrar }) {
                 <span style={{ fontWeight: 600, color: 'var(--texto)' }}>Total</span>
                 <span style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--rosa-oscuro)' }}>${total.toLocaleString()}</span>
               </div>
-              <button onClick={handleCheckout} style={{ width: '100%', background: 'var(--rosa)', color: 'white', border: 'none', padding: '14px', borderRadius: '30px', fontFamily: 'Nunito, sans-serif', fontWeight: 700, fontSize: '1rem', cursor: 'pointer', marginBottom: '0.75rem' }}>
-                Proceder al pago
+              <button onClick={handleCheckout} style={{ width: '100%', background: '#25D366', color: 'white', border: 'none', padding: '14px', borderRadius: '30px', fontFamily: 'Nunito, sans-serif', fontWeight: 700, fontSize: '1rem', cursor: 'pointer', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}>
+                Confirmar pedido por WhatsApp
               </button>
               <button onClick={vaciarCarrito} style={{ width: '100%', background: 'transparent', color: 'var(--texto-claro)', border: '1px solid #f0d0d8', padding: '10px', borderRadius: '30px', fontFamily: 'Nunito, sans-serif', fontWeight: 600, fontSize: '0.9rem', cursor: 'pointer' }}>
                 Vaciar carrito
