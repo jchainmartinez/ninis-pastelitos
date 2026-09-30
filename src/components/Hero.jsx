@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 const banners = [
-  { id: 1, src: '/images/tem01.png', alt: 'Dia del Padre' },
+  { id: 1, src: '/images/portadaOct.jpg', alt: 'Dia del Padre' },
 ]
 
 function Hero() {
